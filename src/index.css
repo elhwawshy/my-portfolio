@@ -837,7 +837,7 @@ input {
 
 .work-img {
     height: 200px;
-    width: 100%g;
+    width: 100%;
     border-radius: .5rem;
     margin-bottom: var(--mb1);
 }
