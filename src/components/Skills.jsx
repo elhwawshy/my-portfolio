@@ -83,8 +83,8 @@ const Skills = () => {
                     {/* Skill 6: Git & Github */}
                     <div className="skills-group">
                         <div className="skills-data">
-                            <i className='bx bxl-git skills-icon-new git-color'></i>
-                            <h3 className="skills-name">Git / Github</h3>
+                            <i className='bx bxl-react skills-icon-new' style={{color: '#61DBFB'}}></i>
+                            <h3 className="skills-name">React Native</h3>
                             <span className="skills-level">Intermediate</span>
                         </div>
                     </div>
