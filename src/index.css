@@ -2672,6 +2672,8 @@ body.dark-theme {
 .qual-card {
     background-color: var(--box-color);
     padding: 1.5rem;
+    width: 92%;
+    margin: auto;
     border-radius: 1rem;
     box-shadow: 6px 6px 15px rgba(166, 171, 189, 0.2);
     /* ظل ناعم */
