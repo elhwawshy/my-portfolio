@@ -22,10 +22,10 @@ const Contact = () => {
     setIsSending(true);
 
     emailjs.sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_blftzzo',
+        'template_tcb1bw9',
         form.current,
-        'YOUR_PUBLIC_KEY'
+        '0HqKQwU5IeEc_J09h'
     )
       .then(() => {
           setTimeout(() => {
@@ -99,7 +99,7 @@ const Contact = () => {
                         <input type="email" name="email" className="input" placeholder="Your Email" />
                     </div>
                     <div className="input-container">
-                        <input type="text" name="subject" className="input" placeholder="Project Subject" />
+                        <input type="text" name="subject" className="input" placeholder="phone" />
                     </div>
                     <div className="input-container textarea">
                         <textarea name="message" className="input textarea-input" placeholder="Tell me more about your project..."></textarea>
