@@ -50,7 +50,7 @@ const Services = () => {
                             </ul>
                             
                             <div className="glass-decoration-text">
-                                <strong>MOHAMED</strong><p>PORTFOLIO 2026</p><span>VALID</span><span>FOREVER</span>
+                                <strong>MOHAMED</strong><p>PORTFOLIO 2026</p><span>VALID</span><span></span>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@ const Services = () => {
                             </ul>
                             
                             <div className="glass-decoration-text">
-                                <strong>MOHAMED</strong><p>PORTFOLIO 2026</p><span>VALID</span><span>FOREVER</span>
+                                <strong>MOHAMED</strong><p>PORTFOLIO 2026</p><span>VALID</span><span></span>
                             </div>
                         </div>
                     </div>
@@ -142,7 +142,7 @@ const Services = () => {
                             </ul>
                             
                             <div className="glass-decoration-text">
-                                <strong>MOHAMED</strong><p>PORTFOLIO 2026</p><span>VALID</span><span>FOREVER</span>
+                                <strong>MOHAMED</strong><p>PORTFOLIO 2026</p><span>VALID</span><span></span>
                             </div>
                         </div>
                     </div>
