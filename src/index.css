@@ -544,8 +544,8 @@ input {
 .home-img {
     position: absolute;
     width: 450px;
-    right: 0px;
     bottom: 10px;
+    right: 0px;
     border-radius: 150px;
     box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
 
@@ -1563,7 +1563,7 @@ textarea.input {
     }
 
     .home-container {
-        row-gap: 0rem;
+        row-gap: 0px;
     }
 
     .home-img {
@@ -2951,7 +2951,7 @@ body.dark-theme {
    شريط التنقل السفلي مع كلمات صغيرة
    (Mobile Bottom Navigation Bar with Labels)
    ========================================= */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px){
 
     /* إخفاء العناصر غير الضرورية */
     .nav-toggle,
@@ -3020,7 +3020,7 @@ body.dark-theme {
         margin: 0 4px;
         border-radius: 20px;
         /* زوايا ناعمة بدلاً من الدائرة الكاملة */
-        padding: 5px 0 10px;
+        padding: 5px 0;
 
         display: flex;
         flex-direction: column;
