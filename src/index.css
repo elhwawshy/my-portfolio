@@ -3020,7 +3020,7 @@ body.dark-theme {
         margin: 0 4px;
         border-radius: 20px;
         /* زوايا ناعمة بدلاً من الدائرة الكاملة */
-        padding: 5px 0;
+        padding: 5px 0 10px;
 
         display: flex;
         flex-direction: column;
