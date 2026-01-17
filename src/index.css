@@ -510,7 +510,8 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25px;
+    width: 20px;
+    height: 20px;
     margin-bottom: 3px;
     /* حجم مناسب */
     border-radius: 50%;
