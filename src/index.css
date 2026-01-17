@@ -2883,4 +2883,134 @@ body.dark-theme {
     }
 }
 
+/* =========================================
+   شريط التنقل السفلي مع كلمات صغيرة
+   (Mobile Bottom Navigation Bar with Labels)
+   ========================================= */
+@media screen and (max-width: 1024px) {
+    
+    /* إخفاء العناصر غير الضرورية */
+    .nav-toggle,
+    .nav-close, 
+    .nav-logo {
+        display: none !important;
+    }
 
+    /* 1. حاوية الشريط السفلي */
+    .sidebar {
+        position: fixed;
+        bottom: 2px;
+        left: 50%;
+        transform: translateX(-50%) !important;
+        top: auto;
+        
+        width: 98%; /* زدنا العرض قليلاً لاستيعاب الكلمات */
+        max-width: 450px;
+        height: 75px; /* زدنا الارتفاع قليلاً */
+        
+        background-color: var(--body-color);
+        border-radius: 1.5rem; /* حواف دائرية ناعمة */
+        padding: 0 0.5rem;
+        
+        /* الظل الخارجي للشريط */
+        box-shadow: 
+            5px 5px 15px var(--shadow-dark), 
+            -5px -5px 15px var(--shadow-light);
+            
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        width: 100%;
+        position: relative;
+        transform: none !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        top: 0;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-evenly; /* توزيع متساوي */
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* 2. تصميم الزر (رابط + أيقونة + نص) */
+    .nav-link {
+        width: 51px; /* عرض أكبر قليلاً ليستوعب النص */
+        height: 55px; /* مستطيل بزوايا دائرية */
+        margin: 0 4px;
+        border-radius: 20px; /* زوايا ناعمة بدلاً من الدائرة الكاملة */
+        padding: 5px 0;
+        
+        display: flex;
+        flex-direction: column; /* الأيقونة فوق والنص تحت */
+        justify-content: center;
+        align-items: center;
+        gap: 0px; /* مسافة صغيرة بين الأيقونة والكلمة */
+
+        /* ظلال الزر */
+        box-shadow: 
+            3px 3px 6px var(--shadow-dark), 
+            -3px -3px 6px var(--shadow-light);
+        
+        transition: all 0.3s ease;
+    }
+
+    /* 3. تصغير الأيقونة */
+    .nav-icon {
+        font-size: 1.1rem; /* تصغير حجم الأيقونة قليلاً */
+        margin: 0;
+        display: block;
+    }
+
+    /* 4. إظهار النص وتصغيره */
+    .nav-name {
+        display: block !important; /* إجبار النص على الظهور */
+        font-size: 7px; /* حجم خط صغير جداً */
+        font-weight: 900;
+        letter-spacing: 0.8px;
+        line-height: 1;
+        text-shadow: none; /* إزالة الظلال الثقيلة عن النص الصغير ليسهل قراءته */
+        opacity: 0.8;
+    }
+
+    /* 5. حالة الزر النشط (Active/Pressed) */
+    .nav-link:active,
+    .nav-link.active-link {
+        box-shadow: 
+            inset 3px 3px 6px var(--shadow-dark), 
+            inset -3px -3px 6px var(--shadow-light) !important;
+        
+        transform: translateY(2px); /* تأثير ضغطة بسيط */
+    }
+
+    .nav-link.active-link .nav-icon {
+        color: var(--skin-color);
+        transform: scale(1.1);
+    }
+    
+    .nav-link.active-link .nav-name {
+        color: var(--skin-color);
+    }
+
+    /* إزالة النقطة القديمة */
+    .nav-link.active-link::after, 
+    .nav-link:hover::after {
+        display: none;
+    }
+
+    /* رفع المحتوى لعدم تغطيته */
+    .main {
+        margin-left: 0;
+        padding-bottom: 6rem;
+    }
+}
