@@ -1559,11 +1559,11 @@ textarea.input {
         background-image: none;
         height: initial;
         align-items: initial;
-        padding: 7rem 0 2rem;
+        padding: 5rem 0 2rem;
     }
 
     .home-container {
-        row-gap: 2rem;
+        row-gap: 0rem;
     }
 
     .home-img {
