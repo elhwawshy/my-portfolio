@@ -65,17 +65,20 @@
 /* =========================================
    Global Reset & Overflow Fix (الحل السحري)
    ========================================= */
-html, body {
+html,
+body {
     width: 100%;
     /* ده السطر المهم: بيخفي أي حاجة تطلع بره عرض الشاشة */
-    overflow-x: hidden !important; 
+    overflow-x: hidden !important;
     position: relative;
 }
 
 /* زيادة تأكيد: عشان لو السكشن نفسه هو اللي بيخرج */
 .section {
-    overflow: hidden; /* بيمنع أي عنصر جوا السكشن إنه يخرج بره حدوده */
+    overflow: hidden;
+    /* بيمنع أي عنصر جوا السكشن إنه يخرج بره حدوده */
 }
+
 /* =========================================
    تحديث الظلال لتناسب الثيم الأحمر الجديد
    ========================================= */
@@ -317,7 +320,7 @@ input {
     row-gap: .5rem;
     width: 85px;
     height: 70px;
-    margin: 5px auto;
+    margin: 10px auto;
     color: var(--title-color);
     border-radius: 15px;
     background: var(--body-color);
@@ -364,7 +367,7 @@ input {
 
 .nav-link:hover .nav-name {
     color: var(--title-color);
-    text-shadow: 1px 1px 0px var(--skin-color-hover),
+    text-shadow: 0px 0px 0px var(--skin-color-hover),
         2px 2px 0px var(--shadow-dark),
         4px 6px 8px rgba(0, 0, 0, 0.6);
 }
@@ -415,13 +418,7 @@ input {
 }
 
 .nav-close {
-    font-size: 1.5rem;
-    position: absolute;
-    top: 1rem;
-    right: 1.25rem;
-    cursor: pointer;
     display: none;
-    color: var(--skin-color);
 }
 
 .nav-link.active-link,
@@ -429,21 +426,12 @@ input {
     color: var(--skin-color);
 }
 
+
+
 .nav-link.active-link::after,
-.nav-link:hover::after {
-    position: absolute;
-    content: '';
-    width: 6px;
-    height: 6px;
-    background-color: var(--skin-color);
-    border-radius: 50%;
-    bottom: 1.8rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-
+    .nav-link:hover::after {
+        display: none;
+    }
 
 .social-share {
     font-size: 1.5rem;
@@ -507,7 +495,8 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 25px;
+    width: 20px;
+    height: 20px;
     margin-bottom: 3px;
     /* حجم مناسب */
     border-radius: 50%;
@@ -541,7 +530,10 @@ input {
 .home-img {
     position: absolute;
     width: 450px;
+    bottom: 10px;
     right: 0px;
+    border-radius: 150px;
+    box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
 
 }
 
@@ -599,6 +591,8 @@ input {
     width: 480px;
     border-radius: .75rem;
     justify-self: center;
+    border-radius: 150px;
+    box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
 }
 
 .about-heading {
@@ -837,7 +831,7 @@ input {
 
 .work-img {
     height: 200px;
-    width: 100%g;
+    width: 100%;
     border-radius: .5rem;
     margin-bottom: var(--mb1);
 }
@@ -1395,6 +1389,8 @@ textarea.input {
 
     .about-img {
         width: 350px;
+        border-radius: 120px;
+        box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
     }
 
     .about-data {
@@ -1462,6 +1458,8 @@ textarea.input {
 @media screen and (max-width: 768px) {
     .about-img {
         width: 250px;
+        border-radius: 120px;
+        box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
     }
 
     .qualification-container {
@@ -1547,11 +1545,11 @@ textarea.input {
         background-image: none;
         height: initial;
         align-items: initial;
-        padding: 7rem 0 2rem;
+        padding: 5rem 0 2rem;
     }
 
     .home-container {
-        row-gap: 2rem;
+        row-gap: 0px;
     }
 
     .home-img {
@@ -1559,6 +1557,8 @@ textarea.input {
         display: block;
         width: 250px;
         justify-self: center;
+        border-radius: 120px;
+        box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
     }
 
     .my-info {
@@ -1626,6 +1626,8 @@ textarea.input {
     .home-img {
         position: relative;
         width: 200px;
+        border-radius: 120px;
+        box-shadow: 3px 3px 6px var(--shadow-dark), -3px -3px 6px var(--shadow-light);
     }
 
     .home-title {
@@ -2223,8 +2225,8 @@ textarea.input {
 
 
 
-/* Glassmorphism Modal Style (FIXED)=========================================*/ 
-.glass-wrapper { 
+/* Glassmorphism Modal Style (FIXED)=========================================*/
+.glass-wrapper {
     color: aliceblue;
     position: relative;
     display: flex;
@@ -2672,6 +2674,8 @@ body.dark-theme {
 .qual-card {
     background-color: var(--box-color);
     padding: 1.5rem;
+    width: 92%;
+    margin: auto;
     border-radius: 1rem;
     box-shadow: 6px 6px 15px rgba(166, 171, 189, 0.2);
     /* ظل ناعم */
@@ -2783,7 +2787,8 @@ body.dark-theme {
 
 /* إخفاء المحتوى غير النشط */
 .skills-content {
-    display: none; /* مخفي افتراضياً */
+    display: none;
+    /* مخفي افتراضياً */
 }
 
 /* إظهار المحتوى النشط */
@@ -2791,7 +2796,8 @@ body.dark-theme {
     display: block;
     /* كلمة forwards هي السر: تجعل العنصر يثبت على ظهوره ولا يختفي */
     animation: fadeSkills 0.5s ease-in-out forwards;
-    opacity: 0; /* نبدأ من الشفافية صفر */
+    opacity: 0;
+    /* نبدأ من الشفافية صفر */
 }
 
 @keyframes fadeSkills {
@@ -2799,18 +2805,22 @@ body.dark-theme {
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 /* شبكة المهارات (Grid) */
 .skills-box {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    max-width: 800px; /* تحديد عرض مناسب عشان ميكونش عريض أوي */
-    margin: 0 auto;   /* توسيط الشبكة */
+    max-width: 800px;
+    /* تحديد عرض مناسب عشان ميكونش عريض أوي */
+    margin: 0 auto;
+    /* توسيط الشبكة */
 }
 
 .skills-group {
@@ -2859,26 +2869,212 @@ body.dark-theme {
 }
 
 /* الألوان */
-.ts-color { color: #3178C6; }        /* TypeScript Blue */
-.react-color { color: #61DBFB; }     /* React Cyan */
-.tailwind-color { color: #38BDF8; }  /* Tailwind Blue */
-.zustand-color { color: #443E38; }   /* Dark Bear (Zustand) or Generic DB */
-.motion-color { color: #E902B5; }    /* Framer Motion Pink */
-.git-color { color: #F1502F; }       /* Git Orange */
+.ts-color {
+    color: #3178C6;
+}
 
-.figma-color { color: #F24E1E; }     /* Figma Red-Orange */
-.framer-color { color: #0055FF; }    /* Framer Blue */
-.ps-color { color: #31A8FF; }        /* Photoshop Blue */
-.ai-color { color: #FF9A00; }
+/* TypeScript Blue */
+.react-color {
+    color: #61DBFB;
+}
+
+/* React Cyan */
+.tailwind-color {
+    color: #38BDF8;
+}
+
+/* Tailwind Blue */
+.zustand-color {
+    color: #443E38;
+}
+
+/* Dark Bear (Zustand) or Generic DB */
+.motion-color {
+    color: #E902B5;
+}
+
+/* Framer Motion Pink */
+.git-color {
+    color: #F1502F;
+}
+
+/* Git Orange */
+
+.figma-color {
+    color: #F24E1E;
+}
+
+/* Figma Red-Orange */
+.framer-color {
+    color: #0055FF;
+}
+
+/* Framer Blue */
+.ps-color {
+    color: #31A8FF;
+}
+
+/* Photoshop Blue */
+.ai-color {
+    color: #FF9A00;
+}
+
 /* تجاوب الشاشات */
 @media screen and (max-width: 576px) {
     .skills-box {
-        grid-template-columns: repeat(2, 1fr); /* عمودين في الموبايل */
+        grid-template-columns: repeat(2, 1fr);
+        /* عمودين في الموبايل */
         gap: 1rem;
     }
+
     .skills-button {
-        font-size: var(--normal-font-size); /* تصغير الخط في التبويبات للموبايل */
+        font-size: var(--normal-font-size);
+        /* تصغير الخط في التبويبات للموبايل */
     }
 }
 
+/* =========================================
+   شريط التنقل السفلي مع كلمات صغيرة
+   (Mobile Bottom Navigation Bar with Labels)
+   ========================================= */
+@media screen and (max-width: 1024px){
 
+    /* إخفاء العناصر غير الضرورية */
+    .nav-toggle,
+    .nav-close,
+    .nav-logo {
+        display: none !important;
+    }
+
+    /* 1. حاوية الشريط السفلي */
+    .sidebar {
+        position: fixed;
+        bottom: 2px;
+        left: 50%;
+        transform: translateX(-50%) !important;
+        top: auto;
+
+        width: 98%;
+        /* زدنا العرض قليلاً لاستيعاب الكلمات */
+        max-width: 450px;
+        height: 75px;
+        /* زدنا الارتفاع قليلاً */
+
+        background-color: var(--body-color);
+        border-radius: 2rem;
+        /* حواف دائرية ناعمة */
+        padding: 0 0.5rem;
+
+        /* الظل الخارجي للشريط */
+        box-shadow:
+            5px 5px 15px var(--shadow-dark),
+            -5px -5px 15px var(--shadow-light);
+
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        width: 100%;
+        position: relative;
+        transform: none !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        top: 0;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-evenly;
+        /* توزيع متساوي */
+        align-items: center;
+        width: 100%;
+        margin: 30px;
+    }
+
+    /* 2. تصميم الزر (رابط + أيقونة + نص) */
+    .nav-link {
+        width: 51px;
+        /* عرض أكبر قليلاً ليستوعب النص */
+        height: 55px;
+        /* مستطيل بزوايا دائرية */
+        margin: 0 4px;
+        border-radius: 20px;
+        /* زوايا ناعمة بدلاً من الدائرة الكاملة */
+        padding: 5px 0;
+
+        display: flex;
+        flex-direction: column;
+        /* الأيقونة فوق والنص تحت */
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        /* مسافة صغيرة بين الأيقونة والكلمة */
+
+        /* ظلال الزر */
+        box-shadow:
+            3px 3px 6px var(--shadow-dark),
+            -3px -3px 6px var(--shadow-light);
+
+        transition: all 0.3s ease;
+    }
+
+    /* 3. تصغير الأيقونة */
+    .nav-icon {
+        font-size: 1.1rem;
+        /* تصغير حجم الأيقونة قليلاً */
+        margin: 0;
+        display: block;
+    }
+
+    /* 4. إظهار النص وتصغيره */
+    .nav-name {
+        display: block !important;
+        /* إجبار النص على الظهور */
+        font-size: 7px;
+        /* حجم خط صغير جداً */
+        font-weight: 900;
+        letter-spacing: 0.8px;
+        line-height: 1;
+        text-shadow: none;
+        /* إزالة الظلال الثقيلة عن النص الصغير ليسهل قراءته */
+        opacity: 0.8;
+    }
+
+    /* 5. حالة الزر النشط (Active/Pressed) */
+    .nav-link:active,
+    .nav-link.active-link {
+        box-shadow:
+            inset 3px 3px 6px var(--shadow-dark),
+            inset -3px -3px 6px var(--shadow-light) !important;
+
+        transform: translateY(2px);
+        /* تأثير ضغطة بسيط */
+    }
+
+    .nav-link.active-link .nav-icon {
+        color: var(--skin-color);
+        transform: scale(1.1);
+    }
+
+    .nav-link.active-link .nav-name {
+        color: var(--skin-color);
+    }
+
+    /* إزالة النقطة القديمة */
+    .nav-link.active-link::after,
+    .nav-link:hover::after {
+        display: none;
+    }
+
+    /* رفع المحتوى لعدم تغطيته */
+    .main {
+        margin-left: 0;
+        padding-bottom: 6rem;
+    }
+}
