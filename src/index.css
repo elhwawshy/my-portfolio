@@ -320,7 +320,7 @@ input {
     row-gap: .5rem;
     width: 85px;
     height: 70px;
-    margin: 10px auto;
+    margin: 5px auto;
     color: var(--title-color);
     border-radius: 15px;
     background: var(--body-color);
